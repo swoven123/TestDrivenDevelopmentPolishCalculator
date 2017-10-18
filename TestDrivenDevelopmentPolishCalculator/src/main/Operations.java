@@ -1,7 +1,8 @@
 /**
- * Created by swoven on 10/16/17.
+ * @author swoven
+ * @since 10/16/17.
  */
-public interface Operations {
+interface Operations {
 
     void apply(OperandStack stack);
 }

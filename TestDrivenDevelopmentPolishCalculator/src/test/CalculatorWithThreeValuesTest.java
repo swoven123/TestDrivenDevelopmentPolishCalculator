@@ -6,7 +6,8 @@ import java.math.BigDecimal;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by swoven on 10/9/17.
+ * @author swoven
+ * @since 10/9/17.
  */
 public class CalculatorWithThreeValuesTest {
 
@@ -35,7 +36,7 @@ public class CalculatorWithThreeValuesTest {
     }
 
     @Test
-    public void testingAccumulatorAfterDropingSingleValue(){
+    public void testingAccumulatorAfterDroppingSingleValue(){
         calculator.drop();
         assertEquals(value2,calculator.getAccumulator());
     }

@@ -6,11 +6,12 @@ import java.math.BigDecimal;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by swoven on 10/9/17.
+ * @author swoven
+ * @since 10/9/17.
  */
 public class OperandStackTest {
 
-    OperandStack operandStack;
+    private OperandStack operandStack;
 
     @Before
     public void setUpOperandStackTest(){
@@ -47,7 +48,6 @@ public class OperandStackTest {
 
     @Test
     public void testPopOnEmptyStack(){
-        BigDecimal bigDecimal=new BigDecimal(12);
         operandStack.pop();
         assertEquals(BigDecimal.ZERO, operandStack.peek());
     }

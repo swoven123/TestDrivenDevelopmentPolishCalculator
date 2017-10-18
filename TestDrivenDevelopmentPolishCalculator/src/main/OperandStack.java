@@ -2,11 +2,12 @@ import java.math.BigDecimal;
 import java.util.Stack;
 
 /**
- * Created by swoven on 10/9/17.
+ * @author swoven
+ * @since 10/9/17.
  */
-public class OperandStack {
+class OperandStack {
 
-    Stack<BigDecimal> values=new Stack<>();
+    private final Stack<BigDecimal> values=new Stack<>();
 
     public BigDecimal peek() {
         if(values.isEmpty())

@@ -1,10 +1,11 @@
 import java.math.BigDecimal;
 
 /**
- * Created by swoven on 10/1/17.
+ * @author swoven
+ * @since 10/1/17.
  */
-public class Calculator {
-    private OperandStack values=new OperandStack();
+class Calculator {
+    private final OperandStack values=new OperandStack();
 
     public BigDecimal getAccumulator() {
         return values.peek();
@@ -24,19 +25,27 @@ public class Calculator {
 
     public void execute(String operand) {
 
-        Operations operations=null;
+        Operations operations;
 
-        if(operand.equals("+"))
-            operations=new AddOperation();
-        else if(operand.equals("-"))
-            operations=new SubtractOperation();
-        else if(operand.equals("*"))
-            operations=new MultiplyOperation();
-        else if(operand.equals("/"))
-            operations=new DivideOperation();
-        else if(operand.equals("^"))
-            operations=new SquareOperation();
-
+        switch(operand){
+            case "+":
+                operations=new AddOperation();
+                break;
+            case "-":
+                operations=new SubtractOperation();
+                break;
+            case "*":
+                operations=new MultiplyOperation();
+                break;
+            case "/":
+                operations=new DivideOperation();
+                break;
+            case "^":
+                operations=new SquareOperation();
+                break;
+            default:
+                operations=new AddOperation();
+        }
         operations.apply(values);
     }
 

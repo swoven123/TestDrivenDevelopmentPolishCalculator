@@ -6,7 +6,8 @@ import java.math.BigDecimal;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by swoven on 10/16/17.
+ * @author swoven
+ * @since 10/16/17.
  */
 public class OperationsTest {
 

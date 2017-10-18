@@ -1,7 +1,8 @@
 import java.math.BigDecimal;
 
 /**
- * Created by swoven on 10/16/17.
+ * @author  swoven
+ * @since 10/16/17.
  */
 public abstract class BinaryOperation implements Operations {
 
@@ -13,6 +14,6 @@ public abstract class BinaryOperation implements Operations {
         values.replaceTop(calculate(valueOne, valueTwo));
     }
 
-    public abstract BigDecimal calculate(BigDecimal valueOne, BigDecimal valueTwo);
+    protected abstract BigDecimal calculate(BigDecimal valueOne, BigDecimal valueTwo);
 
 }
